@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+        <!-- アンダースコアによって単語を分けている名前がCamel形式にマッチするように変更 -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+    <typeAliases>
+        <typeAlias alias="Card" type="info.nakamuri.app.spike.mybatisspike001.Card" />
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://localhost:3306/flashcard" />
+                <property name="username" value="user" />
+                <property name="password" value="pass" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="CardMapper.xml" />
+    </mappers>
+</configuration>

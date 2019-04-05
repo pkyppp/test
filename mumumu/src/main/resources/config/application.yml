@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active:
+    - ${web.active:dev}
+  messages:
+    basename: messages/Messages,messages/ValidationMessages
+    fallback-to-system-locale: false
+#mybatis:
+#  config-location: classpath:/mybatis-config.xml  

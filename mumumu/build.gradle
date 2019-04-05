@@ -1,8 +1,14 @@
+//ext {
+//	appVersion=getProperty("app.version")
+//	appName=getProperty("app.name")
+//}
+
 plugins {
 	id 'org.springframework.boot' version '2.1.4.RELEASE'
 	id 'java'
 }
-
+//apply plugin:'war'
+//apply plugin:'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example'
