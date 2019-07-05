@@ -1,0 +1,43 @@
+spring:
+  profiles: dev
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: example
+    initialization-mode: always
+  session:
+    store-type: redis
+  redis:
+    host: localhost
+    password: foobared
+    port: 6379
+  thymeleaf:
+    cache: false
+  mvc:
+    favicon:
+      path: /tmp/${appsettings.properties.tenantid}/favicon.ico
+      enabled: false
+      
+appsettings:
+  properties:
+    tenantid: LXXXX
+    
+api:
+  connection:
+    max-size: 5
+    keep-alive: true
+    timeout-mills: 2000
+  mail:
+    url: http://localhost:8085/api/email/regist
+  upload:
+    url: http://localhost:8000/rest/upload
+    
+server:
+  tomcat:
+    use-relative-redirects: true
+    max-http-post-size: 8388608
+security:
+  permit-all-ant-pattern: /,/api/**,/wx010/**,/pdf
+  ignore-spring-security-ant-pattern: /css/**,/images/**,/js/**
+  

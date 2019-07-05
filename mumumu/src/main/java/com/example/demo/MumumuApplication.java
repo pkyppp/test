@@ -52,4 +52,19 @@ public class MumumuApplication {
 			}
 		};
 	}
+//	@Bean
+//	public EncryptStrategy encryptStrategy() {
+//		return new EncryptStrategy() {
+//			@Override
+//			public String passwordEncode(String pass) {
+//				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+//				return encoder.encoder(pass);	
+//			}
+//			@Override
+//			public boolean matchesPassword(String pawPass, String encodedPass) {
+//				BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+//				return encoder.matches(pawPass, encodedPass)
+//			}
+//		};
+//	}
 }
